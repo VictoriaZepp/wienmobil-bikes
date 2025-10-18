@@ -37,4 +37,4 @@ old_data.append(combined)
 with open("bike_data_all.json", "w", encoding="utf-8") as f:
     json.dump(old_data, f, indent=2)
 
-print("✅ Data added successfully!")
+print("Data added successfully!")
