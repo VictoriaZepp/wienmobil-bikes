@@ -37,8 +37,9 @@ jobs:
       - name: Commit data
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "update data"
+          commit_message: "update data and plot [skip ci]"
           file_pattern: |
             bike_data_all.json
+            docs/plot.png
             
 

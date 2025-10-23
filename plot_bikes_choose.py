@@ -37,3 +37,6 @@ else:
     plt.xticks(rotation=45)
     plt.tight_layout()
     plt.show()
+
+
+plt.savefig("docs/plot.png", bbox_inches="tight")
