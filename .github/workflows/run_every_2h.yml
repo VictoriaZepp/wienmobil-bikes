@@ -33,6 +33,12 @@ jobs:
         run: |
           python fetch_bikes.py
 
+      - name: Plot latest
+        env:
+          STATION_NAME: "Karlsplatz"
+        run: |
+          python plot_bikes_choose.py
+
 
       - name: Commit data
         uses: stefanzweifel/git-auto-commit-action@v5

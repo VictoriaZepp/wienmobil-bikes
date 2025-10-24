@@ -1,5 +1,8 @@
 import json
+import matplotlib
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+
 
 with open("bike_data_all.json", "r", encoding="utf-8") as f:
     data = json.load(f)
@@ -10,7 +13,10 @@ print("Available stations:")
 for name in sorted(all_stations):
     print("-", name)
 
-station_name = input("\nEnter the station name: ")
+try:
+    station_name = input("\nEnter the station name: ")
+except EOFError:
+    station_name = "Karlsplatz"  # Fallback für GitHub Actions
 
 
 timestamps = []
