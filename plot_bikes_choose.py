@@ -2,6 +2,7 @@ import json
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
 
 
 with open("bike_data_all.json", "r", encoding="utf-8") as f:
@@ -41,8 +42,9 @@ else:
     plt.xlabel("Time")
     plt.ylabel("Number of Bikes")
     plt.xticks(rotation=45)
+    plt.gca().xaxis.set_major_locator(mdates.AutoDateLocator())
+    plt.gca().xaxis.set_major_formatter(mdates.DateFormatter("%H:%M\n%d-%b"))
     plt.tight_layout()
-    plt.show()
+    plt.savefig("docs/plot.png", bbox_inches="tight")
 
 
-plt.savefig("docs/plot.png", bbox_inches="tight")
