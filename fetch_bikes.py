@@ -19,7 +19,7 @@ info = info.json()
 
 info_dict = {s["station_id"]: s for s in info ["data"]["stations"]}
 
-timestamp = datetime.now(timezone.utc).isoformat()
+timestamp = datetime.now().astimezone().isoformat()
 combined = []
 for s in status["data"]["stations"]:
     station_id = s["station_id"]
