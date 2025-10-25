@@ -1,6 +1,9 @@
 import requests
 import json
 from datetime import datetime, timezone
+from pathlib import Path
+Path("docs").mkdir(exist_ok=True)
+Path("data").mkdir(exist_ok=True)
 
 url_status = "https://api.wstw.at/gateway/WL_WIENMOBIL_API/1/station_status.json"
 url_info = "https://api.wstw.at/gateway/WL_WIENMOBIL_API/1/station_information.json"
