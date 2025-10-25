@@ -45,6 +45,9 @@ else:
     plt.gca().xaxis.set_major_locator(mdates.AutoDateLocator())
     plt.gca().xaxis.set_major_formatter(mdates.DateFormatter("%H:%M\n%d-%b"))
     plt.tight_layout()
+
+    plt.gcf().autofmt_xdate()
+
     plt.savefig("docs/plot.png", bbox_inches="tight")
 
 
